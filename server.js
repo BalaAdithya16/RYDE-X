@@ -5,7 +5,7 @@ const axios   = require("axios");
 const https   = require("https");
 
 const app      = express();
-const PORT     = 3002;
+const PORT     = 3000;
 const API_BASE = "https://69aacf98e051e9456fa28645.mockapi.io/api/tt/RideObject2";
 
 axios.defaults.httpsAgent = new https.Agent({ rejectUnauthorized: false });
