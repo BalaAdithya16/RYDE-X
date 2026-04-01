@@ -307,38 +307,11 @@
   </div>
 </div>
 
-<!-- ✅ CORRECT SDK -->
-<script src="https://platform.kore.ai/xo-webclient/6ee78880e7f44497bebbc235c301d7db6db4494476ef45279bb0a0cac549a0f0st85?lang=en"></script>
-
+<script src='https://cdn.jsdelivr.net/npm/kore-web-sdk@11.23.0/dist/umd/kore-web-sdk-umd-chat.min.js'></script>
 <script>
-function loadBot() {
-
-  if (typeof KoreBotChatSDK === "undefined") {
-    console.error("Kore SDK not loaded");
-    return;
-  }
-
-  var botOptions = {
-    botInfo: {
-      name: "RAAVA BOT",
-      _id: "st-855bae24-6688-525b-86e6-e22e06bf44cc"
-    },
-    clientId: "cs-7e252f6f-73a9-5f9d-a8e6-cc1d49ab8214",
-    clientSecret: "gqEVBErLA4rM9zdHCM0uk/Zj1r/WoSB7O1ZP+8LWUZo=",
-    userIdentity: "user_" + Date.now(),
-    botHistory: true
-  };
-
-  KoreBotChatSDK.show(botOptions);
-}
-setTimeout(loadBot, 500);
-
-// // ensure SDK loads first
-// window.addEventListener("load", function () {
-  
-// });
+   KoreChatSDK.chatConfig.botOptions.API_KEY_CONFIG.KEY = '6ee78880e7f44497bebbc235c301d7db6db4494476ef45279bb0a0cac549a0f0st85';
+   new KoreChatSDK.chatWindow().show(KoreChatSDK.chatConfig); 
 </script>
-
  
 <script>
   const API = 'http://localhost:3000/api';
