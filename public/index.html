@@ -301,42 +301,25 @@
 
     <!-- ONLY UI -->
     <div class="chat-wrapper">
-      <div class="chat-header">RAAVA Assistant</div>
-    </div>
+  <div class="chat-header">RAAVA Assistant</div>
 
+  <iframe
+    src="https://platform.kore.ai/xo-webclient/6ee78880e7f44497bebbc235c301d7db6db4494476ef45279bb0a0cac549a0f0st85?lang=en"
+    style="
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 4px;
+      background: #000;
+    ">
+  </iframe>
+
+</div>
   </div>
 </div>
 
 <!-- ✅ CORRECT SDK -->
-<script src="https://cdn.jsdelivr.net/npm/kore-web-sdk@11.23.0/dist/umd/kore-web-sdk-umd-chat.min.js"></script>
-   
-<script>
-function loadBot() {
 
-  if (typeof KoreBotChatSDK === "undefined") {
-    console.error("Kore SDK not loaded");
-    return;
-  }
-
-  var botOptions = {
-    botInfo: {
-      name: "RAAVA BOT",
-      _id: "st-855bae24-6688-525b-86e6-e22e06bf44cc"
-    },
-    clientId: "cs-7e252f6f-73a9-5f9d-a8e6-cc1d49ab8214",
-    clientSecret: "gqEVBErLA4rM9zdHCM0uk/Zj1r/WoSB7O1ZP+8LWUZo=",
-    userIdentity: "user_" + Date.now(),
-    botHistory: true
-  };
-
-  KoreBotChatSDK.show(botOptions);
-}
-
-// ensure SDK loads first
-window.addEventListener("load", function () {
-  setTimeout(loadBot, 500);
-});
-</script>
 
  
 <script>
