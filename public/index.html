@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RYDEX</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,600&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
-  <style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RYDEX</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,600&family=Montserrat:wght@400;500;600;700;900&display=swap%22 rel="stylesheet"/>
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --cream:  #f5f0e8;
       --gold:   #c9a84c;
@@ -18,9 +18,9 @@
       --border: rgba(201,168,76,0.15);
       --input-bg: rgba(245,240,232,0.04);
     }
-
+ 
     html, body { height: 100%; background: var(--ink); color: var(--cream); font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
-
+ 
     /* Grain */
     body::before {
       content: ''; position: fixed; inset: 0; z-index: 100; pointer-events: none;
@@ -28,7 +28,7 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       background-size: 160px;
     }
-
+ 
     .ambient {
       position: fixed; inset: 0; pointer-events: none; z-index: 0;
       background:
@@ -36,16 +36,16 @@
         radial-gradient(ellipse 30% 40% at 100% 80%, rgba(201,168,76,0.05) 0%, transparent 55%),
         radial-gradient(ellipse 40% 30% at 0% 50%,   rgba(201,168,76,0.03) 0%, transparent 50%);
     }
-
+ 
     /* Pages */
     .page { display: none; position: relative; z-index: 1; min-height: 100vh; }
     .page.active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-
+ 
     /* ══════════ HOME ══════════ */
     #home { padding: 70px 24px; text-align: center; }
-
+ 
     .home-inner { width: 100%; max-width: 720px; margin: 0 auto; }
-
+ 
     .wordmark {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
@@ -61,7 +61,7 @@
       from { opacity: 0; clip-path: inset(0 100% 0 0); }
       to   { opacity: 1; clip-path: inset(0 0% 0 0); }
     }
-
+ 
     .wordmark-accent {
       display: block;
       font-family: 'Cormorant Garamond', serif;
@@ -73,7 +73,7 @@
       margin-top: -4px; margin-bottom: 48px;
       animation: fadeUp .7s ease both .3s;
     }
-
+ 
     /* Horizontal rule with diamond */
     .hr-rule {
       display: flex; align-items: center; gap: 16px;
@@ -82,7 +82,7 @@
     }
     .hr-rule-line { flex: 1; height: 1px; background: var(--border); }
     .hr-diamond   { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
-
+ 
     .home-copy {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(18px, 3.5vw, 26px);
@@ -92,7 +92,7 @@
       animation: fadeUp .6s ease both .4s;
     }
     .home-copy em { font-style: italic; color: var(--gold2); }
-
+ 
     /* Feature chips */
     .chips {
       display: flex; flex-wrap: wrap; gap: 8px;
@@ -109,7 +109,7 @@
       transition: background .2s, color .2s;
     }
     .chip:hover { background: rgba(201,168,76,0.12); color: var(--gold2); }
-
+ 
     /* Buttons */
     .btn-group {
       display: flex; gap: 14px; flex-wrap: wrap;
@@ -136,7 +136,7 @@
       border: 1px solid rgba(245,240,232,0.18);
     }
     .btn-ghost:hover { background: rgba(245,240,232,0.05); border-color: rgba(245,240,232,0.4); transform: translateY(-3px); }
-
+ 
     /* Stats */
     .stats {
       display: flex; border-top: 1px solid var(--border);
@@ -155,12 +155,12 @@
       font-size: 8px; letter-spacing: 3px; text-transform: uppercase;
       color: var(--muted); margin-top: 6px; display: block;
     }
-
+ 
     .foot { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(201,168,76,0.25); animation: fadeUp .6s ease both .6s; }
-
+ 
     /* ══════════ INNER PAGES ══════════ */
     .inner-page { padding: 70px 24px 80px; width: 100%; max-width: 520px; }
-
+ 
     .back-btn {
       display: inline-flex; align-items: center; gap: 10px;
       color: var(--muted); font-size: 9px; font-weight: 700;
@@ -170,7 +170,7 @@
       transition: color .2s;
     }
     .back-btn:hover { color: var(--gold); }
-
+ 
     .page-eyebrow {
       font-size: 9px; font-weight: 700; letter-spacing: 4px;
       text-transform: uppercase; color: var(--gold);
@@ -185,14 +185,14 @@
     }
     .page-title em { font-style: italic; color: var(--gold2); }
     .page-sub { font-size: 12px; color: var(--muted); letter-spacing: .5px; margin-bottom: 40px; line-height: 1.8; }
-
+ 
     /* Card */
     .card {
       background: rgba(245,240,232,0.02);
       border: 1px solid var(--border);
       border-radius: 2px; padding: 36px 30px;
     }
-
+ 
     /* Fields */
     .field { margin-bottom: 22px; }
     .field label {
@@ -211,169 +211,173 @@
     }
     .field input::placeholder { color: rgba(245,240,232,0.18); }
     .field input:focus { border-bottom-color: var(--gold); }
-
+ 
     /* Alert */
     .alert { padding: 14px 18px; font-size: 12px; line-height: 1.7; margin-top: 20px; display: none; border-left: 2px solid; animation: fadeUp .3s ease both; letter-spacing: .3px; }
     .alert.success { background: rgba(74,222,128,0.06);  border-color: #4ade80; color: #86efac; }
     .alert.error   { background: rgba(248,113,113,0.06); border-color: #f87171; color: #fca5a5; }
     .alert.show    { display: block; }
-
+ 
     /* Spinner */
     .spinner { display: none; width: 20px; height: 20px; border: 1.5px solid rgba(201,168,76,0.25); border-top-color: var(--gold); border-radius: 50%; animation: spin .7s linear infinite; margin: 16px auto 0; }
     .spinner.show { display: block; }
     @keyframes spin { to { transform: rotate(360deg); } }
-
+ 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-  </style>
+</style>
 </head>
 <body>
 <div class="ambient"></div>
-
+ 
 <!-- ══ HOME ══ -->
 <div id="home" class="page active">
-  <div class="home-inner">
-    <span class="wordmark">RYDEX</span>
-    <span class="wordmark-accent">Premium Ride Experience</span>
-
+<div class="home-inner">
+<span class="wordmark">RYDEX</span>
+<span class="wordmark-accent">Premium Ride Experience</span>
+ 
     <div class="hr-rule"><div class="hr-rule-line"></div><div class="hr-diamond"></div><div class="hr-rule-line"></div></div>
-
+ 
     <p class="home-copy">
       Move through the city with <em>effortless precision.</em><br/>
       Trusted drivers. Instant booking. Zero compromise.
-    </p>
-
+</p>
+ 
     <div class="chips">
-      <div class="chip">⚡ 2-Min Pickup</div>
-      <div class="chip">🛡 Verified Drivers</div>
-      <div class="chip">💸 Best Fares</div>
-      <div class="chip">📍 Live Tracking</div>
-      <div class="chip">🌙 24 / 7 Support</div>
-    </div>
-
-    <div class="btn-group">
-      <button class="btn btn-gold"  onclick="goTo('book')">Book a Ride</button>
-      <button class="btn btn-ghost" onclick="goTo('track')">Already Booked?</button>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><span class="stat-num">50K+</span><span class="stat-lbl">Drivers</span></div>
-      <div class="stat"><span class="stat-num">2M+</span><span class="stat-lbl">Rides Done</span></div>
-      <div class="stat"><span class="stat-num">4.9</span><span class="stat-lbl">Rating</span></div>
-      <div class="stat"><span class="stat-num">30+</span><span class="stat-lbl">Cities</span></div>
-    </div>
-
-    <p class="foot">© 2026 RYDEX · Fast · Safe · Reliable</p>
-  </div>
+<div class="chip">⚡ 2-Min Pickup</div>
+<div class="chip">🛡 Verified Drivers</div>
+<div class="chip">💸 Best Fares</div>
+<div class="chip">📍 Live Tracking</div>
+<div class="chip">🌙 24 / 7 Support</div>
 </div>
-
+ 
+    <div class="btn-group">
+<button class="btn btn-gold"  onclick="goTo('book')">Book a Ride</button>
+<button class="btn btn-ghost" onclick="goTo('track')">Already Booked?</button>
+</div>
+ 
+    <div class="stats">
+<div class="stat"><span class="stat-num">50K+</span><span class="stat-lbl">Drivers</span></div>
+<div class="stat"><span class="stat-num">2M+</span><span class="stat-lbl">Rides Done</span></div>
+<div class="stat"><span class="stat-num">4.9</span><span class="stat-lbl">Rating</span></div>
+<div class="stat"><span class="stat-num">30+</span><span class="stat-lbl">Cities</span></div>
+</div>
+ 
+    <p class="foot">© 2026 RYDEX · Fast · Safe · Reliable</p>
+</div>
+</div>
+ 
 <!-- ══ BOOK ══ -->
 <div id="book" class="page">
-  <div class="inner-page">
-    <button class="back-btn" onclick="goTo('home')">← Home</button>
-    <span class="page-eyebrow">New Booking</span>
-    <div class="page-title">Book a <em>Ride</em></div>
-    <p class="page-sub">Enter your details below and we'll match you with the nearest available driver.</p>
-    <div class="card">
-      <div class="field"><label>Full Name</label><input id="b-name"  type="text" placeholder="e.g. Arjun Sharma"/></div>
-      <div class="field"><label>Phone Number</label><input id="b-phone" type="tel"  placeholder="e.g. +91 98765 43210"/></div>
-      <div class="field"><label>Pickup Location</label><input id="b-pickup" type="text" placeholder="e.g. Hitech City, Hyderabad"/></div>
-      <div class="field"><label>Drop Location</label><input id="b-drop" type="text" placeholder="e.g. Gachibowli, Hyderabad"/></div>
-      <button class="btn btn-gold" style="width:100%;margin-top:8px" onclick="bookRide()">Confirm Booking</button>
-      <div class="spinner" id="b-spin"></div>
-      <div class="alert" id="b-alert"></div>
-    </div>
-  </div>
+<div class="inner-page">
+<button class="back-btn" onclick="goTo('home')">← Home</button>
+<span class="page-eyebrow">New Booking</span>
+<div class="page-title">Book a <em>Ride</em></div>
+<p class="page-sub">Enter your details below and we'll match you with the nearest available driver.</p>
+<div class="card">
+<div class="field"><label>Full Name</label><input id="b-name"  type="text" placeholder="e.g. Arjun Sharma"/></div>
+<div class="field"><label>Phone Number</label><input id="b-phone" type="tel"  placeholder="e.g. +91 98765 43210"/></div>
+<div class="field"><label>Pickup Location</label><input id="b-pickup" type="text" placeholder="e.g. Hitech City, Hyderabad"/></div>
+<div class="field"><label>Drop Location</label><input id="b-drop" type="text" placeholder="e.g. Gachibowli, Hyderabad"/></div>
+<button class="btn btn-gold" style="width:100%;margin-top:8px" onclick="bookRide()">Confirm Booking</button>
+<div class="spinner" id="b-spin"></div>
+<div class="alert" id="b-alert"></div>
 </div>
-
+</div>
+</div>
+ 
 <!-- ══ TRACK ══ -->
 <!-- ══ TRACK / CHATBOT ══ -->
 <!-- ══ TRACK / CHATBOT ══ -->
+<!-- ══ TRACK / CHATBOT ══ -->
 <div id="track" class="page">
-<div class="inner-page">
-<button class="back-btn" onclick="goTo('home')">← Home</button>
-<span class="page-eyebrow">Ride Support</span>
-<div class="page-title">How can we <em>help?</em></div>
-<p class="page-sub">Chat with our assistant to track your ride or get support.</p>
-    <!-- ONLY UI HERE -->
-<div class="chat-wrapper">
-<div class="chat-header">RAAVA Assistant</div>
+  <div class="inner-page">
+    <button class="back-btn" onclick="goTo('home')">← Home</button>
+    <span class="page-eyebrow">Ride Support</span>
+    <div class="page-title">How can we <em>help?</em></div>
+    <p class="page-sub">Chat with our assistant to track your ride or get support.</p>
+
+    <!-- ONLY UI -->
+    <div class="chat-wrapper">
+      <div class="chat-header">RAAVA Assistant</div>
+    </div>
+
+  </div>
 </div>
-  </div>
-</div>
-  <script src="https://platform.kore.ai/kore-web-sdk/kore-bot-sdk-client.js"></script>
- 
+
+<!-- ✅ CORRECT SDK -->
+<script src="https://platform.kore.ai/xo-webclient/6ee78880e7f44497bebbc235c301d7db6db4494476ef45279bb0a0cac549a0f0st85?lang=en"></script>
+
 <script>
+function loadBot() {
 
-window.addEventListener("DOMContentLoaded", function () {
- 
+  if (typeof KoreBotChatSDK === "undefined") {
+    console.error("Kore SDK not loaded");
+    return;
+  }
+
   var botOptions = {
-
     botInfo: {
-
       name: "RAAVA BOT",
-
       _id: "st-855bae24-6688-525b-86e6-e22e06bf44cc"
-
     },
-
     clientId: "cs-7e252f6f-73a9-5f9d-a8e6-cc1d49ab8214",
-
     clientSecret: "gqEVBErLA4rM9zdHCM0uk/Zj1r/WoSB7O1ZP+8LWUZo=",
-
     userIdentity: "user_" + Date.now(),
-
     botHistory: true
-
   };
- 
+
   KoreBotChatSDK.show(botOptions);
- 
+}
+
+// ensure SDK loads first
+window.addEventListener("load", function () {
+  setTimeout(loadBot, 500);
 });
 </script>
- 
 
+ 
 <script>
   const API = 'http://localhost:3000/api';
-
+ 
   // Auto-open track if ?track=1
   window.addEventListener('DOMContentLoaded', () => {
     if (location.search.includes('track=1')) goTo('track');
   });
-
+ 
   function goTo(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     document.querySelectorAll('.alert').forEach(a => { a.className = 'alert'; a.textContent = ''; });
   }
-
+ 
   function showAlert(id, type, html) {
     const el = document.getElementById(id);
     el.className = `alert ${type} show`;
     el.innerHTML = html;
   }
-
+ 
   function spin(id, on) {
     document.getElementById(id).className = on ? 'spinner show' : 'spinner';
   }
-
+ 
   async function bookRide() {
     const name   = document.getElementById('b-name').value.trim();
     const phone  = document.getElementById('b-phone').value.trim();
     const pickup = document.getElementById('b-pickup').value.trim();
     const drop   = document.getElementById('b-drop').value.trim();
-
+ 
     if (!name || !phone || !pickup || !drop) {
       showAlert('b-alert', 'error', 'Please fill in all fields.');
       return;
     }
-
+ 
     document.getElementById('b-alert').className = 'alert';
     spin('b-spin', true);
-
+ 
     try {
       const res  = await fetch(`${API}/book`, {
         method: 'POST',
@@ -382,9 +386,9 @@ window.addEventListener("DOMContentLoaded", function () {
       });
       const data = await res.json();
       spin('b-spin', false);
-
+ 
       if (!res.ok) { showAlert('b-alert', 'error', data.error || 'Booking failed.'); return; }
-
+ 
       sessionStorage.setItem('rydex_confirmed', JSON.stringify(data.ride));
       window.location.href = '/confirmed';
     } catch (err) {
@@ -392,27 +396,27 @@ window.addEventListener("DOMContentLoaded", function () {
       showAlert('b-alert', 'error', 'Could not connect to server. Is it running?');
     }
   }
-
+ 
   async function trackRide() {
     const id = document.getElementById('t-id').value.trim();
     if (!id) { showAlert('t-alert', 'error', 'Please enter a Ride ID.'); return; }
-
+ 
     document.getElementById('t-alert').className = 'alert';
     spin('t-spin', true);
-
+ 
     try {
       // Search by ride_id field
       const res  = await fetch(`${API}/rides`);
       const all  = await res.json();
       spin('t-spin', false);
-
+ 
       const ride = all.find(r => String(r.ride_id) === String(id) || String(r.id) === String(id));
       if (!ride) { showAlert('t-alert', 'error', `No ride found with ID ${id}.`); return; }
-
+ 
       const statusColor = ride.status === 'active' ? '#4ade80' : ride.status === 'completed' ? '#93c5fd' : '#fca5a5';
       showAlert('t-alert', 'success',
         `Ride <strong>#${ride.ride_id || ride.id}</strong> &nbsp;·&nbsp;
-         <span style="color:${statusColor}">${ride.status.toUpperCase()}</span><br/>
+<span style="color:${statusColor}">${ride.status.toUpperCase()}</span><br/>
          ${ride.customer.pickup_location} → ${ride.customer.drop_location}<br/>
          ETA: ${ride.eta_mins} mins &nbsp;·&nbsp; ₹${ride.cost} &nbsp;·&nbsp; ${ride.provider.toUpperCase()}`
       );
