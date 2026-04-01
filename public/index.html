@@ -290,20 +290,25 @@
 
 <!-- ══ TRACK ══ -->
 <!-- ══ TRACK / CHATBOT ══ -->
+<!-- ══ TRACK / CHATBOT ══ -->
 <div id="track" class="page">
-  <div class="inner-page">
-    <button class="back-btn" onclick="goTo('home')">← Home</button>
-    <span class="page-eyebrow">Ride Support</span>
-    <div class="page-title">How can we <em>help?</em></div>
-    <p class="page-sub">Chat with our assistant to track your ride or get support.</p>
-
-    <div class="chat-wrapper">
-  <div class="chat-header">RAAVA Assistant</div>
- 
+<div class="inner-page">
+<button class="back-btn" onclick="goTo('home')">← Home</button>
+<span class="page-eyebrow">Ride Support</span>
+<div class="page-title">How can we <em>help?</em></div>
+<p class="page-sub">Chat with our assistant to track your ride or get support.</p>
+    <!-- ONLY UI HERE -->
+<div class="chat-wrapper">
+<div class="chat-header">RAAVA Assistant</div>
+</div>
+  </div>
+</div>
   <script src="https://platform.kore.ai/kore-web-sdk/kore-bot-sdk-client.js"></script>
  
 <script>
 
+window.addEventListener("DOMContentLoaded", function () {
+ 
   var botOptions = {
 
     botInfo: {
@@ -325,15 +330,10 @@
   };
  
   KoreBotChatSDK.show(botOptions);
+ 
+});
 </script>
  
- 
-</div>
- 
-  </div>
-
-  </div>
-</div>
 
 <script>
   const API = 'http://localhost:3000/api';
