@@ -331,11 +331,12 @@ function loadBot() {
 
   KoreBotChatSDK.show(botOptions);
 }
+setTimeout(loadBot, 500);
 
-// ensure SDK loads first
-window.addEventListener("load", function () {
-  setTimeout(loadBot, 500);
-});
+// // ensure SDK loads first
+// window.addEventListener("load", function () {
+  
+// });
 </script>
 
  
