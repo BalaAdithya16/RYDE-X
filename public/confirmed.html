@@ -366,7 +366,10 @@
     <div class="foot-mark">RYDEX</div>
   </div>
 </div>
-
+<script src='https://cdn.jsdelivr.net/npm/kore-web-sdk@11.23.0/dist/umd/kore-web-sdk-umd-chat.min.js'></script> 
+<script> KoreChatSDK.chatConfig.botOptions.API_KEY_CONFIG.KEY = '9dbfe9fb7420460da45d79526074ee9bf0494f796482468cb93dd3df307898d1stbc'; 
+  new KoreChatSDK.chatWindow().show(KoreChatSDK.chatConfig); 
+</script> 
 <script>
   const raw  = sessionStorage.getItem('rydex_confirmed');
   const ride = raw ? JSON.parse(raw) : null;
